@@ -13,6 +13,7 @@ class DanceFloorViewController: UIViewController {
     
     let metronome = AKMetronome()
     
+    @IBOutlet weak var bpmLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,10 +30,16 @@ class DanceFloorViewController: UIViewController {
         metronome.start()
     }
     
+    @IBAction func handleChangeSlider(_ sender: UISlider) {
+        var val = sender.value
+        metronome.tempo = Double(val)
+        bpmLabel.text = String(val)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
     
