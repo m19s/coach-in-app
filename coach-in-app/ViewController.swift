@@ -21,6 +21,16 @@ class ViewController: UIViewController {
         let nininbaori = storyboard.instantiateViewController(withIdentifier: "nininbaori")
         self.present(nininbaori, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func handleClickDanceBtn(_ sender: UIButton) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let danceFloor = storyboard.instantiateViewController(withIdentifier: "danceFloor")
+        self.present(danceFloor, animated: true, completion: nil)
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
