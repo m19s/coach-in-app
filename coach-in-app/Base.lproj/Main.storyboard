@@ -28,6 +28,16 @@
                                     <action selector="handleClickNininbaoriBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ty8-sX-Q5L"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp4-1r-ci3">
+                                <rect key="frame" x="174" y="379" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ダンスフロア体験">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleClickDanceBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgu-qg-grX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -51,6 +61,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGr-oS-04v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="734" y="-45"/>
+        </scene>
+        <!--Dance Floor View Controller-->
+        <scene sceneID="LXf-VO-YLT">
+            <objects>
+                <viewController storyboardIdentifier="danceFloor" id="Df2-3B-Z6L" customClass="DanceFloorViewController" customModule="coach_in_app" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1yU-4L-Ch3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="zrz-jo-d7n"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qg4-5H-83x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492" y="-45"/>
         </scene>
     </scenes>
 </document>
