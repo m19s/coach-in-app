@@ -40,8 +40,8 @@
         <!--Nininbaori View Controller-->
         <scene sceneID="tWO-c0-1qC">
             <objects>
-                <viewController storyboardIdentifier="nininbaori" id="iom-ER-ODQ" customClass="NininbaoriViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c3E-cO-Jve">
+                <viewController storyboardIdentifier="nininbaori" id="iom-ER-ODQ" customClass="NininbaoriViewController" customModule="coach_in_app" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c3E-cO-Jve" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

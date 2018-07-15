@@ -21,6 +21,15 @@
 		1C6523F820FB3E6300C62F4D /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6523F720FB3E6200C62F4D /* AnalogJoystick.swift */; };
 		1C6523F920FB3E6300C62F4D /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6523F720FB3E6200C62F4D /* AnalogJoystick.swift */; };
 		1C6523FA20FB3E6300C62F4D /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6523F720FB3E6200C62F4D /* AnalogJoystick.swift */; };
+		1C6523FE20FB427D00C62F4D /* substrate.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6523FC20FB427D00C62F4D /* substrate.png */; };
+		1C6523FF20FB427D00C62F4D /* substrate.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6523FC20FB427D00C62F4D /* substrate.png */; };
+		1C65240020FB427D00C62F4D /* substrate.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6523FC20FB427D00C62F4D /* substrate.png */; };
+		1C65240120FB427D00C62F4D /* stick.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6523FD20FB427D00C62F4D /* stick.png */; };
+		1C65240220FB427D00C62F4D /* stick.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6523FD20FB427D00C62F4D /* stick.png */; };
+		1C65240320FB427D00C62F4D /* stick.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6523FD20FB427D00C62F4D /* stick.png */; };
+		1C65240920FB458000C62F4D /* NininbaoriScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C65240820FB458000C62F4D /* NininbaoriScene.swift */; };
+		1C65240A20FB458000C62F4D /* NininbaoriScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C65240820FB458000C62F4D /* NininbaoriScene.swift */; };
+		1C65240B20FB458000C62F4D /* NininbaoriScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C65240820FB458000C62F4D /* NininbaoriScene.swift */; };
 		7E6B0D8A6C1B4D2D510F5953 /* Pods_coach_in_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB5D23C644E085FEEA2F870 /* Pods_coach_in_appUITests.framework */; };
 		D702533CBB10AF6FF031C569 /* Pods_coach_in_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B688C4794E78546DA363A89A /* Pods_coach_in_appTests.framework */; };
 		F0B066F0400161CA88052761 /* Pods_coach_in_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DB3B60D9D09B0F7E882F34 /* Pods_coach_in_app.framework */; };
@@ -60,6 +69,9 @@
 		1C6523E720FB311800C62F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C6523F320FB3E2000C62F4D /* NininbaoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NininbaoriViewController.swift; sourceTree = "<group>"; };
 		1C6523F720FB3E6200C62F4D /* AnalogJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogJoystick.swift; sourceTree = "<group>"; };
+		1C6523FC20FB427D00C62F4D /* substrate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = substrate.png; sourceTree = "<group>"; };
+		1C6523FD20FB427D00C62F4D /* stick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick.png; sourceTree = "<group>"; };
+		1C65240820FB458000C62F4D /* NininbaoriScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NininbaoriScene.swift; sourceTree = "<group>"; };
 		5BB5D23C644E085FEEA2F870 /* Pods_coach_in_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coach_in_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DB3B60D9D09B0F7E882F34 /* Pods_coach_in_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coach_in_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FAD342995BC6E9C65F55424 /* Pods-coach-in-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coach-in-appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-coach-in-appUITests/Pods-coach-in-appUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +149,9 @@
 		1C6523C120FB311200C62F4D /* coach-in-app */ = {
 			isa = PBXGroup;
 			children = (
+				1C6523FB20FB426A00C62F4D /* resources */,
 				1C6523C220FB311200C62F4D /* AppDelegate.swift */,
+				1C65240820FB458000C62F4D /* NininbaoriScene.swift */,
 				1C6523F320FB3E2000C62F4D /* NininbaoriViewController.swift */,
 				1C6523C420FB311200C62F4D /* ViewController.swift */,
 				1C6523C620FB311200C62F4D /* Main.storyboard */,
@@ -166,6 +180,15 @@
 				1C6523E720FB311800C62F4D /* Info.plist */,
 			);
 			path = "coach-in-appUITests";
+			sourceTree = "<group>";
+		};
+		1C6523FB20FB426A00C62F4D /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C6523FD20FB427D00C62F4D /* stick.png */,
+				1C6523FC20FB427D00C62F4D /* substrate.png */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		52E1FCDA04E83708C194E2C2 /* Frameworks */ = {
@@ -285,7 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C65240120FB427D00C62F4D /* stick.png in Resources */,
 				1C6523D020FB311800C62F4D /* LaunchScreen.storyboard in Resources */,
+				1C6523FE20FB427D00C62F4D /* substrate.png in Resources */,
 				1C6523CD20FB311800C62F4D /* Assets.xcassets in Resources */,
 				1C6523C820FB311200C62F4D /* Main.storyboard in Resources */,
 			);
@@ -295,6 +320,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C65240220FB427D00C62F4D /* stick.png in Resources */,
+				1C6523FF20FB427D00C62F4D /* substrate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +329,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C65240320FB427D00C62F4D /* stick.png in Resources */,
+				1C65240020FB427D00C62F4D /* substrate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C6523CB20FB311200C62F4D /* coach_in_app.xcdatamodeld in Sources */,
+				1C65240920FB458000C62F4D /* NininbaoriScene.swift in Sources */,
 				1C6523F820FB3E6300C62F4D /* AnalogJoystick.swift in Sources */,
 				1C6523F420FB3E2000C62F4D /* NininbaoriViewController.swift in Sources */,
 				1C6523C520FB311200C62F4D /* ViewController.swift in Sources */,
@@ -384,6 +414,7 @@
 				1C6523DB20FB311800C62F4D /* coach_in_appTests.swift in Sources */,
 				1C6523F920FB3E6300C62F4D /* AnalogJoystick.swift in Sources */,
 				1C6523F520FB3E2000C62F4D /* NininbaoriViewController.swift in Sources */,
+				1C65240A20FB458000C62F4D /* NininbaoriScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +425,7 @@
 				1C6523E620FB311800C62F4D /* coach_in_appUITests.swift in Sources */,
 				1C6523FA20FB3E6300C62F4D /* AnalogJoystick.swift in Sources */,
 				1C6523F620FB3E2000C62F4D /* NininbaoriViewController.swift in Sources */,
+				1C65240B20FB458000C62F4D /* NininbaoriScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
