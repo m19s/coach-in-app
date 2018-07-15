@@ -6,6 +6,7 @@ target 'coach-in-app' do
   use_frameworks!
 
   # Pods for coach-in-app
+  pod 'AudioKit', '~> 4.0'
 
   target 'coach-in-appTests' do
     inherit! :search_paths
