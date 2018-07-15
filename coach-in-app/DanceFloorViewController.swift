@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import AudioKit
 
 class DanceFloorViewController: UIViewController {
+    
+    let metronome = AKMetronome()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        metronome.callback = {
+            print("call back")
+        }
+        
+        metronome.tempo = 60.0
+        metronome.subdivision = 3
+        metronome.frequency1 = 2000
+        metronome.frequency2 = 1000
+        AudioKit.output = metronome
+        try? AudioKit.start()
+        metronome.start()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
