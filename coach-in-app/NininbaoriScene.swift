@@ -7,24 +7,31 @@
 //
 
 import SpriteKit
+import UIKit
 
 class NininbaoriScene: SKScene {
     
+    // TODO : スティックの画像に差し替える
+    let leftJoystick = 🕹(diameter: 100, colors: (UIColor.blue, UIColor.yellow))
+    let rightJoystick = 🕹(diameter: 100, colors: (UIColor.blue, UIColor.yellow))
+    
     var joystickImageEnabled = true {
         didSet {
-            let image =  UIImage(named: "stick")
-            joystick.stick.image = image
+            let image =  UIImage(named: "./resources/stick")
+            leftJoystick.stick.image = image
         }
     }
     
-    let joystick = 🕹(diameter: 110) // from Emoji
+    
     
     override func didMove(to view: SKView) {
         /* Setup your scene here */
         backgroundColor = UIColor.white
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-        joystick.position = CGPoint(x: joystick.radius + 15, y: joystick.radius + 15)
-        addChild(joystick)
+        leftJoystick.position = CGPoint(x: leftJoystick.radius + 15, y: leftJoystick.radius + 15)
+        addChild(leftJoystick)
+        rightJoystick.position = CGPoint(x: self.frame.maxX - rightJoystick.radius - 15, y:rightJoystick.radius + 15)
+        addChild(rightJoystick)
     }
     
 }
