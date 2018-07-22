@@ -29,6 +29,11 @@ class ViewController: UIViewController {
         self.present(danceFloor, animated: true, completion: nil)
     }
     
+    @IBAction func handleClickBleBtn(_ sender: UIButton) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let danceFloor = storyboard.instantiateViewController(withIdentifier: "BleConnectView")
+        self.present(danceFloor, animated: true, completion: nil)
+    }
     
     
     override func didReceiveMemoryWarning() {

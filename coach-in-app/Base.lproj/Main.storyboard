@@ -38,6 +38,16 @@
                                     <action selector="handleClickDanceBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgu-qg-grX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk1-7g-mPW">
+                                <rect key="frame" x="193" y="132" width="104" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="BLE">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleClickBleBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXr-e2-DYW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -45,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="-45"/>
+            <point key="canvasLocation" x="8.8000000000000007" y="-45.42728635682159"/>
         </scene>
         <!--Nininbaori View Controller-->
         <scene sceneID="tWO-c0-1qC">
@@ -102,6 +112,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qg4-5H-83x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1492" y="-45.42728635682159"/>
+        </scene>
+        <!--Ble Connect View Controller-->
+        <scene sceneID="Mol-SB-JES">
+            <objects>
+                <viewController storyboardIdentifier="BleConnectView" id="rQW-YW-Ofg" customClass="BleConnectViewController" customModule="coach_in_app" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t0m-Di-QMO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="cfo-OQ-IPr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CmA-yg-GnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2206" y="-45"/>
         </scene>
     </scenes>
 </document>
