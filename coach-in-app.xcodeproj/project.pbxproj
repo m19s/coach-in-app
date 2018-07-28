@@ -36,6 +36,10 @@
 		1C65241120FC6F2400C62F4D /* BleConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C65241020FC6F2400C62F4D /* BleConnectViewController.swift */; };
 		1C65241220FC6F2500C62F4D /* BleConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C65241020FC6F2400C62F4D /* BleConnectViewController.swift */; };
 		1C65241320FC6F2500C62F4D /* BleConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C65241020FC6F2400C62F4D /* BleConnectViewController.swift */; };
+		1C68AB962104E75F006B1AED /* ConnectionManager+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C68AB942104E75E006B1AED /* ConnectionManager+Delegate.swift */; };
+		1C68AB972104E75F006B1AED /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C68AB952104E75E006B1AED /* ConnectionManager.swift */; };
+		1CE6589D210C2CA40026DC29 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE6589C210C2CA40026DC29 /* UUID.swift */; };
+		1CE6589F210C2CC70026DC29 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE6589E210C2CC70026DC29 /* Packet.swift */; };
 		7E6B0D8A6C1B4D2D510F5953 /* Pods_coach_in_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB5D23C644E085FEEA2F870 /* Pods_coach_in_appUITests.framework */; };
 		D702533CBB10AF6FF031C569 /* Pods_coach_in_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B688C4794E78546DA363A89A /* Pods_coach_in_appTests.framework */; };
 		F0B066F0400161CA88052761 /* Pods_coach_in_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DB3B60D9D09B0F7E882F34 /* Pods_coach_in_app.framework */; };
@@ -80,6 +84,10 @@
 		1C65240820FB458000C62F4D /* NininbaoriScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NininbaoriScene.swift; sourceTree = "<group>"; };
 		1C65240C20FB50EA00C62F4D /* DanceFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanceFloorViewController.swift; sourceTree = "<group>"; };
 		1C65241020FC6F2400C62F4D /* BleConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleConnectViewController.swift; sourceTree = "<group>"; };
+		1C68AB942104E75E006B1AED /* ConnectionManager+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConnectionManager+Delegate.swift"; sourceTree = "<group>"; };
+		1C68AB952104E75E006B1AED /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		1CE6589C210C2CA40026DC29 /* UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
+		1CE6589E210C2CC70026DC29 /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
 		5BB5D23C644E085FEEA2F870 /* Pods_coach_in_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coach_in_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DB3B60D9D09B0F7E882F34 /* Pods_coach_in_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coach_in_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FAD342995BC6E9C65F55424 /* Pods-coach-in-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coach-in-appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-coach-in-appUITests/Pods-coach-in-appUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +169,8 @@
 				1C6523C220FB311200C62F4D /* AppDelegate.swift */,
 				1C65240C20FB50EA00C62F4D /* DanceFloorViewController.swift */,
 				1C65240820FB458000C62F4D /* NininbaoriScene.swift */,
+				1C68AB952104E75E006B1AED /* ConnectionManager.swift */,
+				1C68AB942104E75E006B1AED /* ConnectionManager+Delegate.swift */,
 				1C65241020FC6F2400C62F4D /* BleConnectViewController.swift */,
 				1C6523F320FB3E2000C62F4D /* NininbaoriViewController.swift */,
 				1C6523C420FB311200C62F4D /* ViewController.swift */,
@@ -169,7 +179,9 @@
 				1C6523CC20FB311800C62F4D /* Assets.xcassets */,
 				1C6523CE20FB311800C62F4D /* LaunchScreen.storyboard */,
 				1C6523D120FB311800C62F4D /* Info.plist */,
+				1CE6589E210C2CC70026DC29 /* Packet.swift */,
 				1C6523C920FB311200C62F4D /* coach_in_app.xcdatamodeld */,
+				1CE6589C210C2CA40026DC29 /* UUID.swift */,
 			);
 			path = "coach-in-app";
 			sourceTree = "<group>";
@@ -222,6 +234,7 @@
 				1C6523BB20FB311200C62F4D /* Sources */,
 				1C6523BC20FB311200C62F4D /* Frameworks */,
 				1C6523BD20FB311200C62F4D /* Resources */,
+				AE6947FC4D8AFD94A72174D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -401,6 +414,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AE6947FC4D8AFD94A72174D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-coach-in-app/Pods-coach-in-app-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-coach-in-app/Pods-coach-in-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -408,13 +439,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE6589D210C2CA40026DC29 /* UUID.swift in Sources */,
 				1C6523CB20FB311200C62F4D /* coach_in_app.xcdatamodeld in Sources */,
 				1C65240920FB458000C62F4D /* NininbaoriScene.swift in Sources */,
+				1CE6589F210C2CC70026DC29 /* Packet.swift in Sources */,
 				1C6523F820FB3E6300C62F4D /* AnalogJoystick.swift in Sources */,
 				1C6523F420FB3E2000C62F4D /* NininbaoriViewController.swift in Sources */,
 				1C65240D20FB50EA00C62F4D /* DanceFloorViewController.swift in Sources */,
+				1C68AB972104E75F006B1AED /* ConnectionManager.swift in Sources */,
 				1C65241120FC6F2400C62F4D /* BleConnectViewController.swift in Sources */,
 				1C6523C520FB311200C62F4D /* ViewController.swift in Sources */,
+				1C68AB962104E75F006B1AED /* ConnectionManager+Delegate.swift in Sources */,
 				1C6523C320FB311200C62F4D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +637,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3TJ75FYSX;
 				INFOPLIST_FILE = "coach-in-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,6 +657,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3TJ75FYSX;
 				INFOPLIST_FILE = "coach-in-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

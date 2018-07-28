@@ -2,17 +2,21 @@ PODS:
   - AudioKit (4.3):
     - AudioKit/UI (= 4.3)
   - AudioKit/UI (4.3)
+  - JGProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - AudioKit (~> 4.0)
+  - JGProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AudioKit
+    - JGProgressHUD
 
 SPEC CHECKSUMS:
   AudioKit: 95bd2427c1afa7954d71b0c6195a09b87b7448bc
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
 
-PODFILE CHECKSUM: 9c448b38b1c9894bca98758d03b82b7111e20abe
+PODFILE CHECKSUM: 42e69154ba6c97a3b1dc5cee9017918de57b20be
 
 COCOAPODS: 1.5.3
