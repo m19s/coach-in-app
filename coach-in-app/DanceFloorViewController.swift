@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioKit
+import CoreBluetooth
 
 
 class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -15,6 +16,9 @@ class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableVi
     let metronome = AKMetronome()
     let dreaminPlayer = AKAppleSampler()
     let vanillaPlayer = AKAppleSampler()
+    var characteristicUUID: CBUUID?
+    var peripheral: CBPeripheral?
+    var channelIdentifier: UInt8 = 0
     
     @IBOutlet weak var bpmLabel: UILabel!
     override func viewDidLoad() {
@@ -24,6 +28,10 @@ class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableVi
         try! self.vanillaPlayer.loadWav("vanilla")
         
         metronome.callback = {
+            if let p = self.peripheral, let uuid = self.characteristicUUID, let characteristic = p.characteristic(by: uuid) {
+                let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
+                p.writeValue(Data(bytes: packet.byteArray()), for: characteristic, type: .withResponse)
+            }
             print("call back")
         }
         
@@ -39,6 +47,7 @@ class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
         try! self.vanillaPlayer.play()
+        print(BLEConnectionManager.shared.peripherals.anyObject())
     }
     
     @IBAction func handleChangeSlider(_ sender: UISlider) {

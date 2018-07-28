@@ -70,7 +70,6 @@ class OperationViewController: UITableViewController, CBPeripheralDelegate {
 	init(_ peripheral: CBPeripheral) {
 		super.init(style: .grouped)
 		self.peripheral = peripheral
-		
 		self.items = [
             Section(title: OperationViewController.DeviceInfoSection, rows: [
 				Row(title: "Device name", value: nil, uuid: CBUUID(string: DeviceInfoServiceDeviceNameCharacteristicUUID)),
@@ -99,6 +98,7 @@ class OperationViewController: UITableViewController, CBPeripheralDelegate {
                     }
                 }
             }
+            self?.dismiss(animated: true, completion: nil)
         }
         
         peripheralObserver.didUpdateValue = { [weak self] (peripheral, characteristic, error) in
@@ -130,7 +130,6 @@ class OperationViewController: UITableViewController, CBPeripheralDelegate {
         
         let manager = BLEConnectionManager.shared
         manager.observers.append(observer)
-        
         if peripheral.state == .disconnected {
             BLEConnectionManager.shared.connect(peripheral: peripheral, options: nil)
             hud = JGProgressHUD()
@@ -212,14 +211,13 @@ class OperationViewController: UITableViewController, CBPeripheralDelegate {
             else {
                 let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChannelViewController") as! ChannelViewController
                 viewController.channelIdentifier = UInt8(indexPath.row - 1)
-                viewController.peripheral = peripheral
+                viewController.peripheral = peripheral // ChannelViewControllerにperipheralを渡す
                 viewController.characteristicUUID = row.uuid
                 navigationController?.pushViewController(viewController, animated: true)
             }
         }
             break
         default:
-
             break
         }
     }
@@ -263,6 +261,7 @@ class OperationViewController: UITableViewController, CBPeripheralDelegate {
 		
 		if let h = hud {
 			h.dismiss()
+            dismiss(animated: true, completion: nil)
 		}
 	}
 	

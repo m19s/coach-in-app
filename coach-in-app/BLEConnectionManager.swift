@@ -136,6 +136,7 @@ class BLEConnectionObserver: NSObject
 
 class BLEConnectionManager: NSObject {
     static let shared = BLEConnectionManager()
+    var peripherals: NSMutableSet = []
     
     private var centralManager: CBCentralManager?
     var observers: [BLEConnectionObserver] = []

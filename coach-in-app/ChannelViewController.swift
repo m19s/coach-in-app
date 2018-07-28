@@ -61,7 +61,6 @@ class ChannelViewController: UIViewController {
     
     func updateBitStringLabel() {
         var message = ""
-        
         let packet = ChannelPacket(channel: channelIdentifier, pulse: UInt(pulseStepper.value), frequency: UInt(frequencyStepper.value), duration: UInt(durationStepper.value))
         let firstByte = packet.byteArray()[0]
         message += String(firstByte, radix: 2)

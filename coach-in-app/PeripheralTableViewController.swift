@@ -27,7 +27,7 @@ class PeripheralTableViewController: UITableViewController {
             if let uuids = advertisementData[CBAdvertisementDataServiceUUIDsKey] as? Array<CBUUID> {
                 for uuid in uuids {
                     if uuid.uuidString == CBUUID(string: DeviceInfoServiceUUID).uuidString {
-                        weakSelf.peripherals.add(peripheral)
+                        weakSelf.peripherals.add(peripheral) // peripheralを保持
                         weakSelf.tableView.reloadData()
                         if let h = weakSelf.hud {
                             h.dismiss()
@@ -97,7 +97,7 @@ class PeripheralTableViewController: UITableViewController {
             }
         }
 	}
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -108,8 +108,10 @@ class PeripheralTableViewController: UITableViewController {
         return cell
     }
 	
+    // peripheralを選択したらそれを保持する役割
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let peripheral = peripherals.allObjects[indexPath.row] as! CBPeripheral
+        BLEConnectionManager.shared.peripherals = peripherals
         let viewController = OperationViewController(peripheral)
         viewController.title = peripheral.name
         navigationController?.pushViewController(viewController, animated: true)
