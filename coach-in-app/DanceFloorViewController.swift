@@ -13,13 +13,15 @@ import AudioKit
 class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let metronome = AKMetronome()
+    let dreaminPlayer = AKAppleSampler()
+    let vanillaPlayer = AKAppleSampler()
     
     @IBOutlet weak var bpmLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let sampler = AKAppleSampler()
-        try! sampler.loadWav("dreamin")
+        try! self.dreaminPlayer.loadWav("dreamin")
+        try! self.vanillaPlayer.loadWav("vanilla")
         
         metronome.callback = {
             print("call back")
@@ -29,11 +31,14 @@ class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableVi
         metronome.subdivision = 3
         metronome.frequency1 = 2000
         metronome.frequency2 = 1000
-        let mixer = AKMixer(sampler, metronome)
+        
+        let mixer = AKMixer(self.dreaminPlayer, self.vanillaPlayer, metronome)
         AudioKit.output = mixer
         try? AudioKit.start()
         metronome.start()
-        try! sampler.play()
+        
+        
+        try! self.vanillaPlayer.play()
     }
     
     @IBAction func handleChangeSlider(_ sender: UISlider) {
@@ -58,8 +63,13 @@ class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("cell：(indexPath.row) musics：(musics[indexPath.row])")
-        print(musics[indexPath.row])
+        if(musics[indexPath.row] == "vannila"){
+            try! self.vanillaPlayer.play()
+            try! self.dreaminPlayer.stop()
+        }else if(musics[indexPath.row] == "dreamin"){
+            try! self.dreaminPlayer.play()
+            try! self.vanillaPlayer.stop()
+        }
     }
     
     
