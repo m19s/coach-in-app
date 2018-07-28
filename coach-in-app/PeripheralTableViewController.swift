@@ -22,6 +22,7 @@ class PeripheralTableViewController: UITableViewController {
 		
         observer.onDiscovered = { [weak self] (peripheral, advertisementData, rssi) in
             print(advertisementData)
+            
             guard let weakSelf = self else { return }
             if let uuids = advertisementData[CBAdvertisementDataServiceUUIDsKey] as? Array<CBUUID> {
                 for uuid in uuids {
@@ -110,8 +111,6 @@ class PeripheralTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let peripheral = peripherals.allObjects[indexPath.row] as! CBPeripheral
         let viewController = OperationViewController(peripheral)
-        
-        
         viewController.title = peripheral.name
         navigationController?.pushViewController(viewController, animated: true)
 	}

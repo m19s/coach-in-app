@@ -10,7 +10,7 @@ import UIKit
 
 /**
  
- UIViewControllerを継承したViewControllerクラス. ルートViewに当たる. 
+ UIViewControllerを継承したViewControllerクラス. ルートViewに当たる.
  */
 class ViewController: UIViewController {
 
@@ -34,8 +34,10 @@ class ViewController: UIViewController {
     
     @IBAction func handleClickBleBtn(_ sender: UIButton) {
         let storyboard: UIStoryboard = self.storyboard!
+        
         let bleViewController = PeripheralTableViewController(style: .plain)
-        self.present(bleViewController, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: bleViewController)
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     
