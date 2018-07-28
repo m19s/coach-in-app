@@ -72,3 +72,6 @@ fastlane/test_output
 
 # Pod
 /Pods
+
+# jazzy
+/jazzy_doc

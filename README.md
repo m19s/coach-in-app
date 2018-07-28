@@ -15,9 +15,13 @@ $ bundle install --path vendor/bundle
 
 # pod install
 $ bundle exec pod install
-
 ```
 
 ## build
 just build in xcode. 
 
+## benri cmd
+```
+# get doc
+$ bundle exec jazzy --min-acl internal --skip-undocumented -o jazzy_doc --author ojisan --author_url https://github.com/m19s/coach-in-app
+```
