@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ 
+ UIViewControllerを継承したViewControllerクラス. ルートViewに当たる. 
+ */
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
