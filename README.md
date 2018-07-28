@@ -1,6 +1,9 @@
 # coach-in-app
 swift app
 
+## Abstract
+play music, generate bpm, input arrow
+
 ## env
 ```
 # ruby version
@@ -17,3 +20,4 @@ $ bundle exec pod install
 
 ## build
 just build in xcode. 
+

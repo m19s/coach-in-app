@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
 
     @IBAction func handleClickNininbaoriBtn(_ sender: UIButton) {
@@ -29,6 +28,11 @@ class ViewController: UIViewController {
         self.present(danceFloor, animated: true, completion: nil)
     }
     
+    @IBAction func handleClickBleBtn(_ sender: UIButton) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let bleViewController = PeripheralTableViewController(style: .plain)
+        self.present(bleViewController, animated: true, completion: nil)
+    }
     
     
     override func didReceiveMemoryWarning() {
