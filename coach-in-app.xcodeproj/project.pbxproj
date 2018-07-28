@@ -48,6 +48,8 @@
 		1CE658AB210C36D30026DC29 /* dreamin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1CE658A9210C36D30026DC29 /* dreamin.mp3 */; };
 		1CE658AD210C3CD60026DC29 /* SoundSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE658AC210C3CD60026DC29 /* SoundSampler.swift */; };
 		1CE658AF210C45750026DC29 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE658AE210C45750026DC29 /* Player.swift */; };
+		1CE658B2210C4D080026DC29 /* lolisp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CE658B0210C4D060026DC29 /* lolisp.wav */; };
+		1CE658B3210C4D080026DC29 /* dreamin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CE658B1210C4D080026DC29 /* dreamin.wav */; };
 		7E6B0D8A6C1B4D2D510F5953 /* Pods_coach_in_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB5D23C644E085FEEA2F870 /* Pods_coach_in_appUITests.framework */; };
 		D702533CBB10AF6FF031C569 /* Pods_coach_in_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B688C4794E78546DA363A89A /* Pods_coach_in_appTests.framework */; };
 		F0B066F0400161CA88052761 /* Pods_coach_in_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DB3B60D9D09B0F7E882F34 /* Pods_coach_in_app.framework */; };
@@ -104,6 +106,8 @@
 		1CE658A9210C36D30026DC29 /* dreamin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dreamin.mp3; sourceTree = "<group>"; };
 		1CE658AC210C3CD60026DC29 /* SoundSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSampler.swift; sourceTree = "<group>"; };
 		1CE658AE210C45750026DC29 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		1CE658B0210C4D060026DC29 /* lolisp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lolisp.wav; sourceTree = "<group>"; };
+		1CE658B1210C4D080026DC29 /* dreamin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dreamin.wav; sourceTree = "<group>"; };
 		5BB5D23C644E085FEEA2F870 /* Pods_coach_in_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coach_in_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DB3B60D9D09B0F7E882F34 /* Pods_coach_in_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coach_in_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FAD342995BC6E9C65F55424 /* Pods-coach-in-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coach-in-appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-coach-in-appUITests/Pods-coach-in-appUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				1CE658A9210C36D30026DC29 /* dreamin.mp3 */,
+				1CE658B1210C4D080026DC29 /* dreamin.wav */,
+				1CE658B0210C4D060026DC29 /* lolisp.wav */,
 				1CE658A8210C36D20026DC29 /* vanilla.wav */,
 				1C6523FD20FB427D00C62F4D /* stick.png */,
 				1C6523FC20FB427D00C62F4D /* substrate.png */,
@@ -356,12 +362,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C65240120FB427D00C62F4D /* stick.png in Resources */,
+				1CE658B2210C4D080026DC29 /* lolisp.wav in Resources */,
 				1C6523D020FB311800C62F4D /* LaunchScreen.storyboard in Resources */,
 				1CE658AA210C36D30026DC29 /* vanilla.wav in Resources */,
 				1C6523FE20FB427D00C62F4D /* substrate.png in Resources */,
 				1CE658AB210C36D30026DC29 /* dreamin.mp3 in Resources */,
 				1C6523CD20FB311800C62F4D /* Assets.xcassets in Resources */,
 				1C6523C820FB311200C62F4D /* Main.storyboard in Resources */,
+				1CE658B3210C4D080026DC29 /* dreamin.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

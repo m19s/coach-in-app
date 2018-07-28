@@ -10,7 +10,7 @@ import UIKit
 import AudioKit
 
 
-class DanceFloorViewController: UIViewController {
+class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let metronome = AKMetronome()
     
@@ -19,7 +19,7 @@ class DanceFloorViewController: UIViewController {
         super.viewDidLoad()
         
         let sampler = AKAppleSampler()
-        try! sampler.loadWav("vanilla")
+        try! sampler.loadWav("dreamin")
         
         metronome.callback = {
             print("call back")
@@ -45,6 +45,27 @@ class DanceFloorViewController: UIViewController {
     @IBAction func hundleClickPlayBtn(_ sender: UIButton) {
 //        print(self.soundSampler)
     }
+    
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return musics.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "music", for: indexPath)
+        cell.textLabel!.text = musics[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("cell：(indexPath.row) musics：(musics[indexPath.row])")
+        print(musics[indexPath.row])
+    }
+    
+    
+    @IBOutlet weak var soundTable: UITableView!
+    let musics = ["vannila", "dreamin", "lolisp"]
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
