@@ -40,6 +40,14 @@
 		1C68AB972104E75F006B1AED /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C68AB952104E75E006B1AED /* ConnectionManager.swift */; };
 		1CE6589D210C2CA40026DC29 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE6589C210C2CA40026DC29 /* UUID.swift */; };
 		1CE6589F210C2CC70026DC29 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE6589E210C2CC70026DC29 /* Packet.swift */; };
+		1CE658A1210C33430026DC29 /* PeripheralTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE658A0210C33430026DC29 /* PeripheralTableViewController.swift */; };
+		1CE658A3210C33A10026DC29 /* BLEConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE658A2210C33A10026DC29 /* BLEConnectionManager.swift */; };
+		1CE658A5210C33F90026DC29 /* OperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE658A4210C33F90026DC29 /* OperationViewController.swift */; };
+		1CE658A7210C34190026DC29 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE658A6210C34190026DC29 /* ChannelViewController.swift */; };
+		1CE658AA210C36D30026DC29 /* vanilla.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CE658A8210C36D20026DC29 /* vanilla.wav */; };
+		1CE658AB210C36D30026DC29 /* dreamin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1CE658A9210C36D30026DC29 /* dreamin.mp3 */; };
+		1CE658AD210C3CD60026DC29 /* SoundSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE658AC210C3CD60026DC29 /* SoundSampler.swift */; };
+		1CE658AF210C45750026DC29 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE658AE210C45750026DC29 /* Player.swift */; };
 		7E6B0D8A6C1B4D2D510F5953 /* Pods_coach_in_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB5D23C644E085FEEA2F870 /* Pods_coach_in_appUITests.framework */; };
 		D702533CBB10AF6FF031C569 /* Pods_coach_in_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B688C4794E78546DA363A89A /* Pods_coach_in_appTests.framework */; };
 		F0B066F0400161CA88052761 /* Pods_coach_in_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DB3B60D9D09B0F7E882F34 /* Pods_coach_in_app.framework */; };
@@ -88,6 +96,14 @@
 		1C68AB952104E75E006B1AED /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		1CE6589C210C2CA40026DC29 /* UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
 		1CE6589E210C2CC70026DC29 /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
+		1CE658A0210C33430026DC29 /* PeripheralTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralTableViewController.swift; sourceTree = "<group>"; };
+		1CE658A2210C33A10026DC29 /* BLEConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEConnectionManager.swift; sourceTree = "<group>"; };
+		1CE658A4210C33F90026DC29 /* OperationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationViewController.swift; sourceTree = "<group>"; };
+		1CE658A6210C34190026DC29 /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		1CE658A8210C36D20026DC29 /* vanilla.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = vanilla.wav; sourceTree = "<group>"; };
+		1CE658A9210C36D30026DC29 /* dreamin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dreamin.mp3; sourceTree = "<group>"; };
+		1CE658AC210C3CD60026DC29 /* SoundSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSampler.swift; sourceTree = "<group>"; };
+		1CE658AE210C45750026DC29 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		5BB5D23C644E085FEEA2F870 /* Pods_coach_in_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coach_in_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DB3B60D9D09B0F7E882F34 /* Pods_coach_in_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coach_in_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FAD342995BC6E9C65F55424 /* Pods-coach-in-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coach-in-appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-coach-in-appUITests/Pods-coach-in-appUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +188,11 @@
 				1C68AB952104E75E006B1AED /* ConnectionManager.swift */,
 				1C68AB942104E75E006B1AED /* ConnectionManager+Delegate.swift */,
 				1C65241020FC6F2400C62F4D /* BleConnectViewController.swift */,
+				1CE658AE210C45750026DC29 /* Player.swift */,
+				1CE658A0210C33430026DC29 /* PeripheralTableViewController.swift */,
+				1CE658A2210C33A10026DC29 /* BLEConnectionManager.swift */,
+				1CE658A6210C34190026DC29 /* ChannelViewController.swift */,
+				1CE658A4210C33F90026DC29 /* OperationViewController.swift */,
 				1C6523F320FB3E2000C62F4D /* NininbaoriViewController.swift */,
 				1C6523C420FB311200C62F4D /* ViewController.swift */,
 				1C6523C620FB311200C62F4D /* Main.storyboard */,
@@ -182,6 +203,7 @@
 				1CE6589E210C2CC70026DC29 /* Packet.swift */,
 				1C6523C920FB311200C62F4D /* coach_in_app.xcdatamodeld */,
 				1CE6589C210C2CA40026DC29 /* UUID.swift */,
+				1CE658AC210C3CD60026DC29 /* SoundSampler.swift */,
 			);
 			path = "coach-in-app";
 			sourceTree = "<group>";
@@ -207,6 +229,8 @@
 		1C6523FB20FB426A00C62F4D /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				1CE658A9210C36D30026DC29 /* dreamin.mp3 */,
+				1CE658A8210C36D20026DC29 /* vanilla.wav */,
 				1C6523FD20FB427D00C62F4D /* stick.png */,
 				1C6523FC20FB427D00C62F4D /* substrate.png */,
 			);
@@ -333,7 +357,9 @@
 			files = (
 				1C65240120FB427D00C62F4D /* stick.png in Resources */,
 				1C6523D020FB311800C62F4D /* LaunchScreen.storyboard in Resources */,
+				1CE658AA210C36D30026DC29 /* vanilla.wav in Resources */,
 				1C6523FE20FB427D00C62F4D /* substrate.png in Resources */,
+				1CE658AB210C36D30026DC29 /* dreamin.mp3 in Resources */,
 				1C6523CD20FB311800C62F4D /* Assets.xcassets in Resources */,
 				1C6523C820FB311200C62F4D /* Main.storyboard in Resources */,
 			);
@@ -439,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE658A1210C33430026DC29 /* PeripheralTableViewController.swift in Sources */,
 				1CE6589D210C2CA40026DC29 /* UUID.swift in Sources */,
 				1C6523CB20FB311200C62F4D /* coach_in_app.xcdatamodeld in Sources */,
 				1C65240920FB458000C62F4D /* NininbaoriScene.swift in Sources */,
@@ -447,10 +474,15 @@
 				1C6523F420FB3E2000C62F4D /* NininbaoriViewController.swift in Sources */,
 				1C65240D20FB50EA00C62F4D /* DanceFloorViewController.swift in Sources */,
 				1C68AB972104E75F006B1AED /* ConnectionManager.swift in Sources */,
+				1CE658A3210C33A10026DC29 /* BLEConnectionManager.swift in Sources */,
 				1C65241120FC6F2400C62F4D /* BleConnectViewController.swift in Sources */,
+				1CE658A5210C33F90026DC29 /* OperationViewController.swift in Sources */,
 				1C6523C520FB311200C62F4D /* ViewController.swift in Sources */,
 				1C68AB962104E75F006B1AED /* ConnectionManager+Delegate.swift in Sources */,
+				1CE658A7210C34190026DC29 /* ChannelViewController.swift in Sources */,
 				1C6523C320FB311200C62F4D /* AppDelegate.swift in Sources */,
+				1CE658AF210C45750026DC29 /* Player.swift in Sources */,
+				1CE658AD210C3CD60026DC29 /* SoundSampler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

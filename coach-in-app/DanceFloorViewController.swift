@@ -9,6 +9,7 @@
 import UIKit
 import AudioKit
 
+
 class DanceFloorViewController: UIViewController {
     
     let metronome = AKMetronome()
@@ -16,6 +17,9 @@ class DanceFloorViewController: UIViewController {
     @IBOutlet weak var bpmLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let sampler = AKAppleSampler()
+        try! sampler.loadWav("vanilla")
         
         metronome.callback = {
             print("call back")
@@ -25,9 +29,11 @@ class DanceFloorViewController: UIViewController {
         metronome.subdivision = 3
         metronome.frequency1 = 2000
         metronome.frequency2 = 1000
-        AudioKit.output = metronome
+        let mixer = AKMixer(sampler, metronome)
+        AudioKit.output = mixer
         try? AudioKit.start()
         metronome.start()
+        try! sampler.play()
     }
     
     @IBAction func handleChangeSlider(_ sender: UISlider) {
@@ -36,6 +42,9 @@ class DanceFloorViewController: UIViewController {
         bpmLabel.text = String(val)
     }
     
+    @IBAction func hundleClickPlayBtn(_ sender: UIButton) {
+//        print(self.soundSampler)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
