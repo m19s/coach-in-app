@@ -25,6 +25,7 @@ class PeripheralTableViewController: UITableViewController {
             
             guard let weakSelf = self else { return }
             if let uuids = advertisementData[CBAdvertisementDataServiceUUIDsKey] as? Array<CBUUID> {
+                print("connected")
                 for uuid in uuids {
                     if uuid.uuidString == CBUUID(string: DeviceInfoServiceUUID).uuidString {
                         weakSelf.peripherals.add(peripheral) // peripheralを保持
