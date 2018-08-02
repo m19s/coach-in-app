@@ -26,21 +26,16 @@ class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableVi
         
         try! self.dreaminPlayer.loadWav("dreamin")
         try! self.vanillaPlayer.loadWav("vanilla")
-         print(BLEConnectionManager.shared.peripherals.anyObject())
-        
+        print(BLEConnectionManager.shared.peripherals)
         self.peripheral = BLEConnectionManager.shared.peripherals.anyObject() as! CBPeripheral
         self.characteristicUUID = CBUUID(string: EMSServiceChannel1CharacteristicUUID)
-        print(self.peripheral)
         metronome.callback = {
             let p = self.peripheral
             let uuid = self.characteristicUUID
             let characteristic = p?.characteristic(by: uuid!)
-//            let characteristic = p?.characteristic(EMSServiceChannel1CharacteristicUUID)
-                let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
+            let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
             p?.writeValue(Data(bytes: packet.byteArray()), for: characteristic!, type: .withResponse)
-                print("write")
-            
-            print("call back")
+
         }
         
         metronome.tempo = 60.0
