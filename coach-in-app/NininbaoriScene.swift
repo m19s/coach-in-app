@@ -12,15 +12,12 @@ import CoreBluetooth
 
 class NininbaoriScene: SKScene {
     
-    var characteristicUUID: CBUUID?
     var upperCharasteristic: CBUUID = CBUUID(string: EMSServiceChannel1CharacteristicUUID)
     var underCharasteristic: CBUUID = CBUUID(string: EMSServiceChannel2CharacteristicUUID)
     var rightCharasteristic: CBUUID = CBUUID(string: EMSServiceChannel3CharacteristicUUID)
     var leftCharasteristic: CBUUID = CBUUID(string: EMSServiceChannel4CharacteristicUUID)
-    var peripheral: CBPeripheral = BLEConnectionManager.shared.peripherals.anyObject() as! CBPeripheral
     var lefthandPeripheral: CBPeripheral = BLEConnectionManager.shared.peripherals.allObjects[0] as! CBPeripheral
-    var righthandPeripheral: CBPeripheral = BLEConnectionManager.shared.peripherals.allObjects[1] as! CBPeripheral
-    
+//    var righthandPeripheral: CBPeripheral = BLEConnectionManager.shared.peripherals.allObjects[1] as! CBPeripheral
     let leftDebugLabel = SKLabelNode(text: "left ctr val")
     let rightDebugLabel = SKLabelNode(text: "right ctr val")
     
@@ -35,13 +32,7 @@ class NininbaoriScene: SKScene {
         }
     }
     
-    func viewDidLoad() {
-        print("loaded")
-    }
-    
-    
     override func didMove(to view: SKView) {
-//        self.peripheral = BLEConnectionManager.shared.peripherals.anyObject() as! CBPeripheral
         self.upperCharasteristic = CBUUID(string: EMSServiceChannel1CharacteristicUUID)
         
         /* Setup your scene here */
