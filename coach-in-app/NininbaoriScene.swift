@@ -12,17 +12,9 @@ import CoreBluetooth
 
 class NininbaoriScene: SKScene {
     
-    // 1: 上
-    // 2: 左
-    // 3: 下
-    // 4: 右
-    
-    var leftHandperipheral: CBPeripheral = BLEConnectionManager.shared.peripherals.allObjects[0] as! CBPeripheral
-    var rightHandperipheral: CBPeripheral = BLEConnectionManager.shared.peripherals.allObjects[1] as! CBPeripheral
-    var upperChannel: CBUUID = CBUUID(string: EMSServiceChannel1CharacteristicUUID)
-     var leftChannel: CBUUID = CBUUID(string: EMSServiceChannel2CharacteristicUUID)
-     var underChannel: CBUUID = CBUUID(string: EMSServiceChannel3CharacteristicUUID)
-     var rightChannel: CBUUID = CBUUID(string: EMSServiceChannel4CharacteristicUUID)
+    var characteristicUUID: CBUUID?
+    var upperCharasteristic: CBUUID = CBUUID(string: EMSServiceChannel1CharacteristicUUID)
+    var peripheral: CBPeripheral = BLEConnectionManager.shared.peripherals.anyObject() as! CBPeripheral
     
     let leftDebugLabel = SKLabelNode(text: "left ctr val")
     let rightDebugLabel = SKLabelNode(text: "right ctr val")
@@ -38,10 +30,14 @@ class NininbaoriScene: SKScene {
         }
     }
     
+    func viewDidLoad() {
+        print("loaded")
+    }
+    
+    
     override func didMove(to view: SKView) {
-        print("move")
-        print(BLEConnectionManager.shared.peripherals.allObjects)
-        self.leftHandperipheral = BLEConnectionManager.shared.peripherals.anyObject() as! CBPeripheral
+//        self.peripheral = BLEConnectionManager.shared.peripherals.anyObject() as! CBPeripheral
+        self.characteristicUUID = CBUUID(string: EMSServiceChannel1CharacteristicUUID)
         
         /* Setup your scene here */
         backgroundColor = UIColor.white
@@ -71,35 +67,20 @@ class NininbaoriScene: SKScene {
             var yVal = data.velocity.y
             if(yVal > 25 && abs(xVal) < 25 ){
                 print("upper")
-                let p = self.leftHandperipheral
-                let uuid = self.upperChannel
-                let characteristic = p.characteristic(by: uuid)
+                let p = self.peripheral
+                let uuid = self.characteristicUUID
+                let characteristic = p.characteristic(by: uuid!)
                 let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
                 p.writeValue(Data(bytes: packet.byteArray()), for: characteristic!, type: .withResponse)
                 self.leftDebugLabel.text = "upper"
             }else if(yVal < -25 && abs(xVal) < 25 ){
                 print("under")
-                let p = self.leftHandperipheral
-                let uuid = self.underChannel
-                let characteristic = p.characteristic(by: uuid)
-                let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
-                p.writeValue(Data(bytes: packet.byteArray()), for: characteristic!, type: .withResponse)
                 self.leftDebugLabel.text = "under"
             } else if(xVal > 25 && abs(yVal) < 25){
                 print("right")
-                let p = self.leftHandperipheral
-                let uuid = self.rightChannel
-                let characteristic = p.characteristic(by: uuid)
-                let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
-                p.writeValue(Data(bytes: packet.byteArray()), for: characteristic!, type: .withResponse)
                 self.leftDebugLabel.text = "right"
             } else if (xVal < -25 && abs(yVal) < 25){
                 print("left")
-                let p = self.leftHandperipheral
-                let uuid = self.leftChannel
-                let characteristic = p.characteristic(by: uuid)
-                let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
-                p.writeValue(Data(bytes: packet.byteArray()), for: characteristic!, type: .withResponse)
                 self.leftDebugLabel.text = "left"
             }
         }
@@ -110,11 +91,6 @@ class NininbaoriScene: SKScene {
             var yVal = data.velocity.y
             if(yVal > 25 && abs(xVal) < 25 ){
                 print("upper")
-                let p = self.rightHandperipheral
-                let uuid = self.upperChannel
-                let characteristic = p.characteristic(by: uuid)
-                let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
-                p.writeValue(Data(bytes: packet.byteArray()), for: characteristic!, type: .withResponse)
                 self.rightDebugLabel.text = "upper"
             }else if(yVal < -25 && abs(xVal) < 25 ){
                 print("under")

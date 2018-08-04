@@ -20,28 +20,33 @@ class DanceFloorViewController: UIViewController, UITableViewDelegate, UITableVi
     var peripheral: CBPeripheral?
     var channelIdentifier: UInt8 = 0
     
+    
     @IBOutlet weak var bpmLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         try! self.dreaminPlayer.loadWav("dreamin")
         try! self.vanillaPlayer.loadWav("vanilla")
-        print(BLEConnectionManager.shared.peripherals)
+         print(BLEConnectionManager.shared.peripherals.anyObject())
+        
         self.peripheral = BLEConnectionManager.shared.peripherals.anyObject() as! CBPeripheral
         self.characteristicUUID = CBUUID(string: EMSServiceChannel1CharacteristicUUID)
+        print(self.peripheral)
         metronome.callback = {
             let p = self.peripheral
             let uuid = self.characteristicUUID
             let characteristic = p?.characteristic(by: uuid!)
-            let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
+//            let characteristic = p?.characteristic(EMSServiceChannel1CharacteristicUUID)
+                let packet = DrivePacket(channel: 0, delayMilliSeconds: 0, driveAll: true)
             p?.writeValue(Data(bytes: packet.byteArray()), for: characteristic!, type: .withResponse)
-
+                print("write")
+            print("call back")
         }
         
         metronome.tempo = 60.0
         metronome.subdivision = 3
-        metronome.frequency1 = 2000
-        metronome.frequency2 = 1000
+        metronome.frequency1 = 0
+        metronome.frequency2 = 0
         
         let mixer = AKMixer(self.dreaminPlayer, self.vanillaPlayer, metronome)
         AudioKit.output = mixer
